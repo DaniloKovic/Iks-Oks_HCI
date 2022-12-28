@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>Iks_Oks</RootNamespace>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>images\tac_tic_toe_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Iks-Oks\**" />
+    <EmbeddedResource Remove="Iks-Oks\**" />
+    <None Remove="Iks-Oks\**" />
+    <Page Remove="Iks-Oks\**" />
+  </ItemGroup>
+
+</Project>

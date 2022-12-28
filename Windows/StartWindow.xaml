@@ -1,0 +1,46 @@
+﻿<Window x:Class="Iks_Oks.StartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Iks_Oks"
+        mc:Ignorable="d"
+        Title="StartWindow" Height="481" Width="744" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style x:Key="LabelStyle" TargetType="{x:Type Label}">
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="FontSize" Value="42"/>
+            <Setter Property="Foreground" Value="LightGray"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+        </Style>
+
+        <Style x:Key="RoundButton" TargetType="Button">
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="20" />
+                </Style>
+            </Style.Resources>
+        </Style>
+
+        <Style x:Key="BasicGridButton" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="#99CCFF"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+            <Setter Property="FontSize" Value="80"></Setter>
+            <Setter Property="FontWeight" Value="Heavy"></Setter>
+            <!-- <EventSetter Event="MouseEnter"  Handler="MouseEnterByPlayer"></EventSetter> -->
+            <!-- <EventSetter Event="MouseLeave"  Handler="MouseLeaveByPlayer"></EventSetter> -->
+        </Style>
+    </Window.Resources>
+
+    <Window.Background>
+        <ImageBrush ImageSource="C:\Users\DaK\source\repos\Iks-Oks\images\xo.jpg"></ImageBrush>
+    </Window.Background>
+
+    <Grid Margin="0,0,0,0">
+        <Label x:Name="lbPickAGame" Style="{StaticResource LabelStyle}" Content="  Pick a game !" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="410,84,0,0" Width="310" RenderTransformOrigin="1.059,1.928" Foreground="#FFC7BD38" BorderThickness="4,4,4,4"/>
+        <Button Name="btn3x3" Content="3x3"  Style="{DynamicResource RoundButton}" HorizontalAlignment="Left" Margin="495,179,0,0" VerticalAlignment="Top" Height="70" Width="160" RenderTransformOrigin="0.5,1.713" FontSize="30" FontFamily="Comic Sans MS" Opacity="0.8" Click="btn3x3_Click"/>
+        <Button Name="btn5x5" Content="5x5"  Style="{DynamicResource RoundButton}" HorizontalAlignment="Left" Margin="495,259,0,0" VerticalAlignment="Top" Height="70" Width="160" RenderTransformOrigin="0.5,2.856" FontSize="30" FontFamily="Comic Sans MS" Opacity="0.8" Click="btn5x5_Click"/>
+    </Grid>
+</Window>
